@@ -1,0 +1,14 @@
+/* .ekart--products--container{
+    margin: 20px auto;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0px 17vh;
+} */
+
+.tourism--products--container{
+    /* margin: 20px auto; */
+    display:block;
+    /* padding: 0px 17vh; */
+    /* border: 2px solid black; */
+}
+

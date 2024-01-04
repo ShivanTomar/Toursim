@@ -1,0 +1,46 @@
+<!-- <p>booking works!</p> -->
+<!-- <p>registration works!</p> -->
+<h1 class="ms-5">Book Here !!!</h1>
+   <div class="container mt-4" >
+    <div class="card">
+<form class="form-group m-3 w-75">
+    <div>
+      <label for="name">Name</label>
+      <input type="text"  class="form-control" id="name"   placeholder="Enter Name">
+    </div>
+    <div>
+      <label for="phNum">Mobile Number</label>
+      <input type="text"    class="form-control" id="phNum"  placeholder="Enter Mobile Number">
+    </div>
+
+    <div>
+      <label for="numTickets">Number of Tickets</label>
+      <select name="numTickets" id="numTickets" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="packages">Choose A Package</label>
+      <select name="packages" id="packages" class="form-control">
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Dehli">Dehli</option>
+        <option value="Kashmir">Kashmir</option>
+        <option value="Manali">Manali</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="date">Date</label>
+      <input type="date"    class="form-control" id="date"  placeholder="date">
+    </div>
+
+     <button type="submit" class="btn btn-primary m-2" (click)="book()">Book Now</button>
+  </form>
+</div>
+
+</div>
+

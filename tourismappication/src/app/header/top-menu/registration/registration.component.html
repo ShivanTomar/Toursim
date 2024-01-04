@@ -1,0 +1,49 @@
+<!-- <p>registration works!</p> -->
+<h1 class="ms-5">Register here!!!</h1>
+   <div class="container mt-4" >
+    <div class="card">
+<form class="form-group m-3">
+    <div>
+      <label for="name">Name</label>
+      <input type="text"  class="form-control" id="name"   placeholder="Enter Name">
+    </div>
+
+    <div>
+      <label for="gender">Gender</label>
+      <div>
+        <input type="radio"  id="male" value="male" name="gender">
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio"   id="female" value="female" name="gender">
+        <label for="female">Female</label>
+      </div>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email"   class="form-control" id="email"  placeholder="Enter Email">
+    </div>
+
+    <div>
+      <label for="phNum">Mobile Number</label>
+      <input type="text"    class="form-control" id="phNum"  placeholder="Enter Mobile Number">
+    </div>
+
+    <div>
+      <label for="address">Address</label>
+      <textarea   class="form-control" name="address" id="address" cols="100" rows="5"></textarea>
+    </div>
+
+    <div>
+      <label>Set Password</label>
+      <input type="password"   class="form-control" id="password" class="form-control" placeholder="Enter Password">
+    </div>
+
+     <button type="submit" class="btn btn-primary" (click)="save()">Register</button>
+
+
+  </form>
+</div>
+
+</div>

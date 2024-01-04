@@ -1,0 +1,8 @@
+ 
+<div class="tourism--search--product">
+    <input class="tourism-search-product-input" [(ngModel)]="searchText">
+    <button class="btn btn-search"  [ngClass]="{'btn': true,'btn-search':searchText,'btn-search-disable':!searchText}">Search</button>
+</div>
+<div class="tourism-search-result-for"><p *ngIf="!(searchText=='')"><strong>Search result for:</strong>{{searchText}}</p></div>
+
+ 

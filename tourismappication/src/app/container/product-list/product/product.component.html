@@ -1,0 +1,17 @@
+
+ 
+
+<div class="tourism--product--item" >
+  <div class="tourism--product--name">{{product.name}}</div>
+  <div class="image-and-description">
+    <div class="tourism--product--image">
+      <img [src]="product.imageURL" class="tourism--product--image">
+    </div> 
+    <div>
+    <p>{{product.description}}</p>
+    </div>
+  </div>
+  <div class="booking-button">
+    <a routerLink="/booking" class="btn btn-primary">Book This Tour</a> 
+  </div>
+</div>

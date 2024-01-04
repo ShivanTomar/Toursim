@@ -1,0 +1,32 @@
+.tourism--header{
+    width: 100%;
+    height: 11vh;
+    display:flex;
+    flex-wrap: wrap;
+    border-bottom: #E5E4E2 1.5px solid;
+}
+
+.tourism-logo{
+    padding: 1.2vh 8vh;
+    font-size: 40px;
+    font-weight: bold;
+    color: #36454F;
+    font-family: 'Concert One', sans-serif;
+    width:20%;
+}
+.tourism--header--nav{
+    width: 80%;
+    padding: 1vh 2vh;
+    font-size: 12px;
+}
+
+
+.tourism--bottom--bar{
+    display: flex;
+}
+ 
+ 
+
+ 
+
+ 
