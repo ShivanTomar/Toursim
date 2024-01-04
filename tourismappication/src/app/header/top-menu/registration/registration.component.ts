@@ -1,41 +1,47 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent {
-  userName: string ="";
-  email: string ="";
-  password: string ="";
-  mobileNumber!: number;
-  gender: string="";
-  address: string="";
+export class RegistrationComponent implements OnInit{
 
-  constructor(private router: Router,private http: HttpClient ){
+  registration:any = FormGroup;
+ 
+  constructor(private fb: FormBuilder, private router: Router,private http: HttpClient ,private apiService:ApiService){
+  }
+  ngOnInit(): void {
 
+    this.registration =this.fb.group({
+      name: [''],
+      email: [''],
+      password: [''],
+      mobile: [''],
+      gender: [''],
+      address: ['']
+    })
+    
+ 
   }
 
-  save(){
-  
-    let bodyData = {
-      "userName" : this.userName,
-      "gender":this.gender,
-      "email" : this.email,
-      "mobileNumber" : this.mobileNumber,
-      "password" : this.password,
-      "address":this.address
-    };
-    // console.log(bodyData);
-    this.http.post("http://localhost:8085/api/v1/employee/save",bodyData,{responseType: 'text'}).subscribe((resultData: any)=>
+  save(userData:any){
+    
+    this.apiService.registerUser(userData).subscribe((resultData: any)=>
     {
         console.log(resultData);
-        alert("Employee Registered Successfully");
+        if(resultData){
+          alert("Employee Registered Successfully");
+          this.router.navigateByUrl('/login');
+
+        }else{
+          alert('Registered successfully. Now you can login !!!')
+        }
     });
-    alert('Registered successfully. Now you can login !!!')
-    this.router.navigateByUrl('/login');
+       
   }
 }

@@ -9,13 +9,16 @@ import { BookingComponent } from './container/product-list/booking/booking.compo
 import { ForgotPasswordComponent } from './header/top-menu/login/forgot-password/forgot-password.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { AuthGuardGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'product',component:ProductListComponent},
+  {path:'product',component:ProductListComponent,
+    canActivate:[AuthGuardGuard]},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegistrationComponent},
-  {path:'booking',component:BookingComponent},
+  {path:'booking',component:BookingComponent,
+  canActivate:[AuthGuardGuard]},
   {path:'forgot-password',component:ForgotPasswordComponent},
   {path:'footer',component:FooterComponent},
   {path:'**',component:PagenotfoundComponent}
